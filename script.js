@@ -17,7 +17,7 @@ if (docURL.indexOf('/#/') > -1) {
 
     // split the URL final string o get an object with all params 
     params = docURL.split('/');
-    alert(params);
+    console.log(params);
   }
 } else {
   console.log('No URL parameters found');
