@@ -17,15 +17,8 @@ if (docURL.indexOf('/#/') > -1) {
 
     // split the URL final string o get an object with all params 
     params = docURL.split('/');
-    window.alert(params);
-    alert(params);
-const list  = document.getElementById('list');
- 
-window.onload = () => {
-  list.innerHTML = params.map(i => `<li>${i}</li>`).join('');
-};
+    console.log(params);
   }
 } else {
   console.log('No URL parameters found');
 }
-
