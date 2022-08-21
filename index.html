@@ -1,15 +1,40 @@
+<!DOCTYPE html>
 <html>    
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>My Links</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
-                        
-
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">           
     </head>
     <body>
-        <script src="./script.js"></script>
-          <link rel="stylesheet" href="./style.css" >
+        <link rel="stylesheet" href="dist/style.css">         
+         <script>
+     var docURL = window.location.href,
+  params = [];
+
+// filter out the website origin "example.github.io" in the OP example      
+docURL = docURL.replace(window.location.origin, '');
+
+// if /#/ found then we have URL parameters
+// grabbing the parameters part of the URL
+if (docURL.indexOf('/#/') > -1) {
+  docURL = docURL.split('/#/')[1];
+  if (docURL != '') {
+
+    // omit the last forward slash if exist
+    if (docURL[docURL.length - 1] == '/') {
+      docURL = docURL.substring(0, docURL.length - 1);
+    }
+
+    // split the URL final string o get an object with all params 
+    params = docURL.split('/');
+    alert(params);
+  }
+} else {
+  console.log('No URL parameters found');
+}
+
+    </script>
         <!-- Logo -->
         <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8bwlD9_T78ny8Bd1c0lAjGolcKIsCq6xG5E6Dzs9jFVtYIvS_UI3QVAIPbcPT-hHpCMU&usqp=CAU" />
 
