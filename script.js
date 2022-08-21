@@ -17,6 +17,7 @@ if (docURL.indexOf('/#/') > -1) {
 
     // split the URL final string o get an object with all params 
     params = docURL.split('/');
+    window.alert(params);
     alert(params);
   }
 } else {
