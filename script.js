@@ -1,3 +1,8 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-console.log(urlParams.get('id'))
+
+const values = urlParams.values();
+
+for (const value of values) {
+  console.log(value);
+}
