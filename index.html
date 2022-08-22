@@ -46,12 +46,12 @@ if (docURL.indexOf('/#/') > -1) {
   if (docURL != '') {
 
     // omit the last forward slash if exist
-    if (docURL[docURL.length - 1] == '\|\') {
+    if (docURL[docURL.length - 1] == '#') {
       docURL = docURL.substring(0, docURL.length - 1);
     }
 
     // split the URL final string o get an object with all params 
-    params = docURL.split('\|\');
+    params = docURL.split('#');
     console.log(params);
   }
 } else {
