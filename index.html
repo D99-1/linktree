@@ -22,7 +22,7 @@
         <!-- Popular Content -->
         <h2>Check Out These Links</h2>
 
-        <a href="T1"><pre id="T1"></pre></a>
+        <a id="L1"><pre id="T1"></pre></a>
         <a href=""><pre id="T2"></pre></a>
         <a href=""><pre id="T3"></pre></a>
 
@@ -58,8 +58,9 @@ if (docURL.indexOf('/#/') > -1) {
   console.log('No URL parameters found');
 }
       document.getElementById("T1").innerHTML = params[0];
-      document.getElementById("T2").innerHTML = params[1];
-      document.getElementById("T3").innerHTML = params[2];
+      document.getElementById("T2").innerHTML = params[2];
+      document.getElementById("T3").innerHTML = params[4];
+      document.getElementById("L1").setAttribute("href",params[1]);
            
      
 
