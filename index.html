@@ -13,7 +13,7 @@
 
          
         <!-- Logo -->
-        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8bwlD9_T78ny8Bd1c0lAjGolcKIsCq6xG5E6Dzs9jFVtYIvS_UI3QVAIPbcPT-hHpCMU&usqp=CAU" />
+        <img class="logo" id="IMG" />
         <h1><pre id="USR"></pre><h1>
         <!-- Featured -->
      <!--   <h2>Featured</h2> 
@@ -57,13 +57,14 @@ if (docURL.indexOf('/#/') > -1) {
 } else {
   console.log('No URL parameters found');
 }
+      document.querySelector('IMG').src = params[1];
       document.getElementById("USR").innerHTML = params[0];
-      document.getElementById("T1").innerHTML = params[1];
-      document.getElementById("L1").setAttribute("href",params[2]);
-      document.getElementById("T2").innerHTML = params[3];
-      document.getElementById("L2").setAttribute("href",params[4]);
-      document.getElementById("T3").innerHTML = params[5];
-      document.getElementById("L3").setAttribute("href",params[6]);
+      document.getElementById("T1").innerHTML = params[2];
+      document.getElementById("L1").setAttribute("href",params[3]);
+      document.getElementById("T2").innerHTML = params[4];
+      document.getElementById("L2").setAttribute("href",params[5]);
+      document.getElementById("T3").innerHTML = params[6];
+      document.getElementById("L3").setAttribute("href",params[7]);
       
            
      
