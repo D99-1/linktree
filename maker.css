@@ -37,11 +37,7 @@ a,
   height: 100%;
   background-color: rgba(0,0,0,.76);
 }
-.full {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 1000px;
-}
+
 .container__child {
   width: 50%;
   height: 100%;
@@ -52,7 +48,6 @@ a,
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
   align-items: center;
   background: url(http://ultraimg.com/images/spectre-login.jpg);
   background-repeat: no-repeat;
@@ -94,7 +89,6 @@ h2 {
 .signup__form {
   padding: 2.5rem;
   background: #fafafa;
-  height: 1250px;
 }
 label {
   font-size: .85rem;
