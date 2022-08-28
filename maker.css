@@ -40,7 +40,7 @@ a,
 .full {
   overflow-y: auto;
   overflow-x: hidden;
-  height: auto;
+  height: 1000px;
 }
 .container__child {
   width: 50%;
