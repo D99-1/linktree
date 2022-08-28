@@ -47,6 +47,7 @@ a,
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
   align-items: center;
   background: url(http://ultraimg.com/images/spectre-login.jpg);
   background-repeat: no-repeat;
