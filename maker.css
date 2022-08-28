@@ -20,7 +20,7 @@ a,
   margin-right: auto;
   margin-left: auto;
   transform: translateY(-50%);
-  overflow: auto;
+  overflow: scroll;
   display: flex;
   align-items: center;
   justify-content: center;
