@@ -52,7 +52,7 @@ a,
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
-  height: 2000px;
+  height: 100%;
   align-items: center;
   background: url(http://ultraimg.com/images/spectre-login.jpg);
   background-repeat: no-repeat;
@@ -94,6 +94,7 @@ h2 {
 .signup__form {
   padding: 2.5rem;
   background: #fafafa;
+  height: 100%;
 }
 label {
   font-size: .85rem;
