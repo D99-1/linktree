@@ -2,7 +2,7 @@
 @function remy($value) {
   @return ($value / 16px) * 1rem;
 }
-html { overflow-y: auto; overflow-x:hidden; }
+html { overflow-y: scroll; overflow-x:hidden; }
 body {
   font: 100% / 1.414 "Open Sans", "Roboto", arial, sans-serif;
   background: #e9e9e9;
