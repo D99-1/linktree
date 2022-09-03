@@ -39,6 +39,7 @@ a,
 
 .container__child {
   width: 50%;
+  height: 100%;
   color: #fff;
 }
 .signup__thumbnail {
