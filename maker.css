@@ -34,7 +34,7 @@ a,
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0,0,0,.76);
+  background-color: rgb(0 0 0 / 76%);
 }
 
 .container__child {
