@@ -57,14 +57,33 @@ if (docURL.indexOf('/#/') > -1) {
 } else {
   console.log('No URL parameters found');
 }
-      document.querySelector('IMG').src = params[1];
-      document.getElementById("USR").innerHTML = params[0];
-      document.getElementById("T1").innerHTML = params[2];
-      document.getElementById("L1").setAttribute("href",params[3]);
-      document.getElementById("T2").innerHTML = params[4];
-      document.getElementById("L2").setAttribute("href",params[5]);
-      document.getElementById("T3").innerHTML = params[6];
-      document.getElementById("L3").setAttribute("href",params[7]);
+
+const paramlinks = [params[1],params[3],params[5],params[7]]
+console.log(decodeURIComponent(paramlinks))
+const decodedparamlinks = decodeURIComponent(paramlinks)
+const plusprotection = decodedparamlinks.toString().replace(/\+/g," ")
+console.log(plusprotection)
+const spacedparamlinks = plusprotection.toString().replace(/ /g, "%20");
+console.log(spacedparamlinks)
+finalparamlinks = spacedparamlinks.split(',')
+console.log(finalparamlinks)
+
+const names = [params[0],params[2],params[4],params[6]]
+const decodedNames = decodeURIComponent(names)
+const namesPlusprotection = decodedNames.toString().replace(/\+/g," ")
+const decodedNamesArray = namesPlusprotection.split(',')
+console.log(decodedNamesArray)
+
+
+
+      document.querySelector('IMG').src = finalparamlinks[0];
+      document.getElementById("USR").innerHTML = decodedNamesArray[0];
+      document.getElementById("T1").innerHTML = decodedNamesArray[1];
+      document.getElementById("L1").setAttribute("href",finalparamlinks[1]);
+      document.getElementById("T2").innerHTML = decodedNamesArray[2];
+      document.getElementById("L2").setAttribute("href",finalparamlinks[2]);
+      document.getElementById("T3").innerHTML = decodedNamesArray[3];
+      document.getElementById("L3").setAttribute("href",finalparamlinks[3]);
           
   
     </script>
