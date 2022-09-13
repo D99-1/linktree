@@ -110,7 +110,7 @@
   var postReq = "https://d99-1.github.io/linktree/#/"+username+"#"+pfp+"#"+link1title+"#"+link1+"#"+link2title+"#"+link2+"#"+link3title+"#"+link3
   
 document.getElementById("doneBTN").onclick = function () { 
-}
+
   
     var xhr = new XMLHttpRequest();
 xhr.open("POST", "https://d99-url-shortener-api.herokuapp.com/api/url", true);
@@ -131,7 +131,7 @@ xhr.onload = function() {
 
         document.getElementById('codeInputID').style.display = 'none';
   }
-
+}
   
 
 }
