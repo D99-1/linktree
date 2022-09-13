@@ -121,8 +121,8 @@
 
 var xhr = new XMLHttpRequest();
 xhr.open("POST", "https://d99-url-shortener-api.herokuapp.com/api/url", true);
-xhr.send(JSON({
-    fullUrl: `${postReq}`
+xhr.send(JSON.stringify({
+    "fullUrl": postReq
 }));
 xhr.onload = function() {
   console.log("HELLO")
