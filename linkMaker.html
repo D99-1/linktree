@@ -119,6 +119,7 @@ xhr.send(JSON.stringify({
 }));
 xhr.onload = function() {
   var data = JSON.parse(this.responseText);
+  var full = "data:"+data
     if(pfp != null){
     var full = data.shortId
     
