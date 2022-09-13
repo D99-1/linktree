@@ -109,7 +109,14 @@
   var link3title = GetURLParameter('link3title')
   var link3 = GetURLParameter('link3')
 
-  var full = {pfp!= null?"https://d99-1.github.io/linktree/#/"+username+"#"+pfp+"#"+link1title+"#"+link1+"#"+link2title+"#"+link2+"#"+link3title+"#"+link3:"•••"}
+  if(pfp != null){
+    var full = "https://d99-1.github.io/linktree/#/"+username+"#"+pfp+"#"+link1title+"#"+link1+"#"+link2title+"#"+link2+"#"+link3title+"#"+link3
+    
+    
+  }else{
+      var full = "•••"
+
+  }
   console.log(full)
   document.getElementById("fullLink").innerHTML = full
 
