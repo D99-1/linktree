@@ -121,19 +121,21 @@ xhr.send(JSON.stringify({
 xhr.onload = function() {
   var data = JSON.parse(this.responseText);
   console.log(data)
-  var full = "data:"+data
-    if(pfp != null){
-    var full = data.shortId
+  var full = data.shortId
+      console.log(full)
     
-    
-  }else{
-        document.getElementById('codeInputID').style.display = 'none';
+  if(full != null){
+            document.getElementById("fullLink").innerHTML = full
 
+  }else{
+
+        document.getElementById('codeInputID').style.display = 'none';
   }
 
+  
+
 }
-  console.log(full)
-document.getElementById("fullLink").innerHTML = full
+
 
 
 
