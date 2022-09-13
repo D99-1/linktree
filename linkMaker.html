@@ -119,10 +119,8 @@ xhr.send(JSON.stringify({
 }));
 xhr.onload = function() {
   var data = JSON.parse(this.responseText);
-}
-}
-  if(pfp != null){
-    var full = xhr.responseText
+    if(pfp != null){
+    var full = data.shortId
     
     
   }else{
@@ -131,6 +129,9 @@ xhr.onload = function() {
   }
   console.log(full)
   document.getElementById("fullLink").innerHTML = full
+}
+}
+
 
 
 
