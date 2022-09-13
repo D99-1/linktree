@@ -122,7 +122,7 @@
 var xhr = new XMLHttpRequest();
 xhr.open("POST", "https://d99-url-shortener-api.herokuapp.com/api/url", true);
 xhr.send(JSON.stringify({
-    "fullUrl": postReq
+    "fullUrl": "https://youtube.com.au"
 }));
 xhr.onload = function() {
   console.log("HELLO")
