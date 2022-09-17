@@ -122,7 +122,7 @@ xhr.send(JSON.stringify({
 xhr.onload = function() {
   var res = JSON.parse(this.responseText);
   console.log(res)
-  full = res.toString()
+  full = "res.toString()"
       console.log("full:" + full)
     return full;
 }}
