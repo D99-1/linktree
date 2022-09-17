@@ -120,7 +120,7 @@ xhr.send(JSON.stringify({
 }));
 function getRes(){ 
 xhr.onload = function() {
-  var res = JSON.parse(this.responseText);
+  var res = JSON.parse(this.responseText.data);
   console.log(res)
   full = res.data.shortId
       console.log("full:" + full)
