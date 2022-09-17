@@ -117,14 +117,15 @@ xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.send(JSON.stringify({
     "fullUrl": postReq
 }));
+  function getRes = async(){
 xhr.onload = function() {
   var res = JSON.parse(this.responseText);
   console.log(res)
   full = res
       console.log("full:" + JSON.stringify(full))
     
-}.then(() => {
-  
+}}
+ getRes() 
  // document.getElementById("doneBTN").onclick = async function () {
 // }
 
@@ -136,7 +137,7 @@ xhr.onload = function() {
         console.log(full)
         document.getElementById('codeInputID').style.display = 'none';
   }
-  }};)
+  }
 
 </script>
 </body>
