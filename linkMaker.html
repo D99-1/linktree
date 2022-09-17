@@ -7,6 +7,8 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,300'>
+ <script src="https://www.google.com/recaptcha/api.js"></script>
+
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'><link rel="stylesheet" href="./maker.css">
 </head>
 <body>
@@ -39,7 +41,7 @@
     <div class="signup__overlay"></div>
   </div>
   <div class="container__child signup__form">
-    <form action="#">
+    <form action="#" id="demo-form">
       <div class="form-group">
         <label for="url">Profile Picture Url</label>
         <input class="form-control" type="url" name="pfp" id="pfp" placeholder="https://.../MyProfilePicture.png" required title="The URL must begin with https://"/>
@@ -75,7 +77,8 @@
       <div class="m-t-lg">
         <ul class="list-inline">
           <li>
-            <input class="btn btn--form" id="doneBTN" type="submit" value="Create My Link" />
+            <div class="g-recaptcha" data-sitekey="6LdtewciAAAAAKRpOcdJ8Td_tcB8CrLhHf0QyKfF" ></div>
+            <input class="btn btn--form" id="doneBTN" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit'data-action='submit'> type="submit" value="Create My Link" />
           </li>
         </ul>
       </div>
@@ -85,6 +88,11 @@
   </div>   
 <!-- partial -->
 <script>
+  
+  function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+  
  function GetURLParameter(sParam)
 {
     var sPageURL = window.location.search.substring(1);
