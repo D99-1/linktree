@@ -118,7 +118,7 @@ xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.send(JSON.stringify({
     "fullUrl": postReq
 }));}
- async function getRes(){
+ function getRes = async() => {
 xhr.onload = function() {
   var res = JSON.parse(this.responseText);
   console.log(res)
