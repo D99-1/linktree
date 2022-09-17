@@ -108,8 +108,8 @@
   var link3 = GetURLParameter('link3')
   
   var postReq = "https://d99-1.github.io/linktree/#/"+username+"#"+pfp+"#"+link1title+"#"+link1+"#"+link2title+"#"+link2+"#"+link3title+"#"+link3
-  
-document.getElementById("doneBTN").onclick = function () { 
+  var full = null
+document.getElementById("doneBTN").onclick = function () { }
 
   
     var xhr = new XMLHttpRequest();
@@ -118,15 +118,15 @@ xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.send(JSON.stringify({
     "fullUrl": postReq
 }));
-xhr.onload = function() {
+xhr.onload = function getRes() {
   var data = JSON.parse(this.responseText);
   console.log(data)
-  full = data.shortId
-      console.log(full)
+  full = data
+      console.log("full:" + full)
     
 }
   
-}
+
   
     if(full != null){
             document.getElementById("fullLink").innerHTML = full
