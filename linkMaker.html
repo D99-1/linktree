@@ -128,10 +128,13 @@ xhr.onload = function() {
 }}
  // document.getElementById("doneBTN").onclick = async function () {
 // }
-
+const printRes = async () => {
+  const res = await getRes();
+  console.log(res);
+};
     if(full !== null){
       getRes().then(res =>{
-            document.getElementById("fullLink").innerHTML = res 
+            document.getElementById("fullLink").innerHTML = printRes() 
 
       })
   }else{
