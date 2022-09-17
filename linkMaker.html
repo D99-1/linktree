@@ -130,20 +130,8 @@ xhr.onload = function() {
     console.log("displayer"+full)
   document.getElementById("fullLink").innerHTML = some;
 }
-  
-  getRes().then(
-
-  
- // getRes().then(function(value) {myDisplayer(value);})
-  
- 
-    if(full != null){
-      myDisplayer(full)
-  }else{
-        document.getElementById('codeInputID').style.display = 'none';
-  
-  }  
-  )
+  document.getElementById('codeInputID').style.display = 'none';
+  getRes().then(myDisplayer(full))
 </script>
 </body>
 </html>
