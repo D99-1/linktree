@@ -129,7 +129,7 @@ xhr.onload = function() {
   document.getElementById("doneBTN").onclick = async function () { getRes()
  }
 
-  
+  for(var i; i > 0; i++){
     if(full !== null){
             document.getElementById("fullLink").innerHTML = full
 
@@ -137,7 +137,7 @@ xhr.onload = function() {
         console.log(full)
         document.getElementById('codeInputID').style.display = 'none';
   }
-  
+  }
 
 </script>
 </body>
