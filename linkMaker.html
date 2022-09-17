@@ -130,9 +130,10 @@ xhr.onload = function() {
 // }
 
     if(full !== null){
-            document.getElementById("fullLink").innerHTML =  getRes() 
+      getRes().then(res =>{
+            document.getElementById("fullLink").innerHTML = res 
 
-
+      })
   }else{
         console.log(full)
         document.getElementById('codeInputID').style.display = 'none';
