@@ -122,8 +122,8 @@ xhr.send(JSON.stringify({
 xhr.onload = function() {
   var res = JSON.parse(this.responseText);
   console.log(res)
-  full = res
-      console.log("full:" + JSON.stringify(full))
+  full = JSON.stringify(res)
+      console.log("full:" + full)
     return full;
 }}
  // document.getElementById("doneBTN").onclick = async function () {
