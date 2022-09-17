@@ -126,14 +126,7 @@ xhr.onload = function() {
       console.log("full:" + full)
 
 }}
-  getRes()
- // document.getElementById("doneBTN").onclick = async function () {
-// }
-const printRes = async () => {
-  const res = await getRes();
-  console.log(res);
-};
-  
+  getRes().then({
   function myDisplayer(some) {
     console.log("displayer"+full)
   document.getElementById("fullLink").innerHTML = some;
@@ -144,17 +137,13 @@ const printRes = async () => {
  // getRes().then(function(value) {myDisplayer(value);})
   
  
-  {/*  if(full !== null){
-      getRes().then(res =>{
-            document.getElementById("fullLink").innerHTML = res
-
-      })
+    if(full !== null){
+      myDisplayer(full)
   }else{
-        console.log(full)
         document.getElementById('codeInputID').style.display = 'none';
   
-  }      */}
-
+  }  
+  })
 </script>
 </body>
 </html>
