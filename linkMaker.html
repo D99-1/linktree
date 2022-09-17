@@ -109,7 +109,6 @@
   
   var postReq = "https://d99-1.github.io/linktree/#/"+username+"#"+pfp+"#"+link1title+"#"+link1+"#"+link2title+"#"+link2+"#"+link3title+"#"+link3
   var full = null
-document.getElementById("doneBTN").onclick = function () { }
 
   
     var xhr = new XMLHttpRequest();
@@ -127,7 +126,9 @@ xhr.onload = function() {
     
 }}
   
-getRes().then({
+  document.getElementById("doneBTN").onclick = async function () { getRes()
+ }
+
   
     if(full !== null){
             document.getElementById("fullLink").innerHTML = full
@@ -136,7 +137,7 @@ getRes().then({
         console.log(full)
         document.getElementById('codeInputID').style.display = 'none';
   }
-  })
+  
 
 </script>
 </body>
