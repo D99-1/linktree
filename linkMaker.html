@@ -108,7 +108,7 @@
   var link3 = GetURLParameter('link3')
   
   var postReq = "https://d99-1.github.io/linktree/#/"+username+"#"+pfp+"#"+link1title+"#"+link1+"#"+link2title+"#"+link2+"#"+link3title+"#"+link3
-  var full = "test"
+  var full = null
 
   
     var xhr = new XMLHttpRequest();
@@ -132,12 +132,11 @@ xhr.onload = function() {
   document.getElementById("fullLink").innerHTML = some;
 }
   console.log("after"+ full)
-  myDisplayer(full)
   
  // getRes().then(function(value) {myDisplayer(value);})
   
  
-    if(full !== null){
+    if(full != null){
       myDisplayer(full)
   }else{
         document.getElementById('codeInputID').style.display = 'none';
