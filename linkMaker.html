@@ -126,11 +126,13 @@ xhr.onload = function() {
       console.log("full:" + full)
 
 }}
-  getRes().then({
-  function myDisplayer(some) {
+    function myDisplayer(some) {
     console.log("displayer"+full)
   document.getElementById("fullLink").innerHTML = some;
 }
+  
+  getRes().then({
+
   console.log("after"+ full)
   
  // getRes().then(function(value) {myDisplayer(value);})
