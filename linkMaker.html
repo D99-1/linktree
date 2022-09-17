@@ -127,7 +127,7 @@ xhr.onload = function() {
     
 }}
   
-getRes().then(
+getRes().then({
   
     if(full != null){
             document.getElementById("fullLink").innerHTML = full
@@ -136,7 +136,7 @@ getRes().then(
         console.log(full)
         document.getElementById('codeInputID').style.display = 'none';
   }
-)
+  })
 
 </script>
 </body>
