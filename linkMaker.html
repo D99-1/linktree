@@ -124,8 +124,7 @@ xhr.onload = function() {
   console.log(res)
   full = "res.toString()"
       console.log("full:" + full)
-   myDisplayer(full)
-    return full;
+
 }}
  // document.getElementById("doneBTN").onclick = async function () {
 // }
@@ -135,13 +134,15 @@ const printRes = async () => {
 };
   
   function myDisplayer(some) {
-  document.getElementById("fullLink").innerHTML = some;
+  document.getElementById("fullLink").innerHTML = full;
 }
+  
+  myDisplayer()
   
  // getRes().then(function(value) {myDisplayer(value);})
   
  
-  {/*  if(full !== null){
+   if(full !== null){
       getRes().then(res =>{
             document.getElementById("fullLink").innerHTML = res
 
@@ -150,7 +151,7 @@ const printRes = async () => {
         console.log(full)
         document.getElementById('codeInputID').style.display = 'none';
   
-  }.   */}
+  }.   
 
 </script>
 </body>
