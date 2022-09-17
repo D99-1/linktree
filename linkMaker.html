@@ -123,7 +123,7 @@ xhr.onload = function() {
   full = res
       console.log("full:" + JSON.stringify(full))
     
-}.then(
+}.then(() => {
   
  // document.getElementById("doneBTN").onclick = async function () {
 // }
@@ -136,7 +136,7 @@ xhr.onload = function() {
         console.log(full)
         document.getElementById('codeInputID').style.display = 'none';
   }
-  })
+  }})
 
 </script>
 </body>
