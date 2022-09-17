@@ -122,7 +122,7 @@ xhr.send(JSON.stringify({
 xhr.onload = function() {
   var res = JSON.parse(this.responseText);
   console.log(res)
-  full = JSON.stringify(res)
+  full = res.toString()
       console.log("full:" + full)
     return full;
 }}
@@ -134,7 +134,7 @@ const printRes = async () => {
 };
     if(full !== null){
       getRes().then(res =>{
-            document.getElementById("fullLink").innerHTML = printRes() 
+            document.getElementById("fullLink").innerHTML = getRes()
 
       })
   }else{
