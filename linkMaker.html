@@ -42,7 +42,7 @@
     <div class="signup__overlay"></div>
   </div>
   <div class="container__child signup__form">
-    <form action="#">
+    <form action="#" id="createLinkForm">
       <div class="form-group">
         <label for="url">Profile Picture Url</label>
         <input class="form-control" type="url" name="pfp" id="pfp" placeholder="https://.../MyProfilePicture.png" required title="The URL must begin with https://"/>
@@ -91,7 +91,7 @@
 <script>
   
   function onSubmit(token) {
-        document.getElementById("demo-form").submit();
+        document.getElementById("createLinkForm").submit();
     }
   
  function GetURLParameter(sParam)
