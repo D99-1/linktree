@@ -77,9 +77,20 @@
       </div>
       <div class="m-t-lg">
         <ul class="list-inline">
+          <li><div class=""><!-- BEGIN: ReCAPTCHA implementation example. --><div id="recaptcha" class="g-recaptcha" data-sitekey="6LeFeRIiAAAAAOPEUieRVSQEGMGQl62_T7tRR8ux" data-callback="onSuccess" data-action="action" data-bind="recaptcha-demo-submit"></div><script>
+                      var onSuccess = function(response) {
+                        var errorDivs = document.getElementsByClassName("recaptcha-error");
+                        if (errorDivs.length) {
+                          errorDivs[0].className = "";
+                        }
+                        var errorMsgs = document.getElementsByClassName("recaptcha-error-message");
+                        if (errorMsgs.length) {
+                          errorMsgs[0].parentNode.removeChild(errorMsgs[0]);
+                        }
+                        document.getElementById("createLinkForm").submit();};</script><!-- Optional noscript fallback. --><!-- END: ReCAPTCHA implementation example. --></div></li>
           <li>
             
-            <button class="btn btn--form" id="doneBTN" type="submit" class="g-recaptcha" data-sitekey="6LeFeRIiAAAAAOPEUieRVSQEGMGQl62_T7tRR8ux" data-callback="onSubmit">Create My Link</button>
+            <button class="btn btn--form" id="doneBTN" type="submit" >Create My Link</button>
           </li>
         </ul>
       </div>
