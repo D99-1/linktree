@@ -43,12 +43,12 @@ if (docURL.indexOf('/#/') > -1) {
   docURL = docURL.split('/#/')[1];
   if (docURL != '') {
 
-    if (docURL[docURL.length - 1] == '#') {
+    if (docURL[docURL.length - 1] == '%23') {
       docURL = docURL.substring(0, docURL.length - 1);
     }
 
     // split the URL final string to get an object with all params 
-    params = docURL.split('#');
+    params = docURL.split('%23');
     console.log(params);
   }
 } else {
