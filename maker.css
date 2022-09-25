@@ -53,10 +53,9 @@ a,
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: url(http://ultraimg.com/images/spectre-login.jpg);
   height: 100%;
   background-repeat: no-repeat;
- ;background-position: bottom;
+  background-position: bottom;
   background-size: cover;
   margin-top: 30px;
 }
