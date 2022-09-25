@@ -25,16 +25,13 @@
       <h2 class="heading--secondary">Create Yours Today</h2>
     </div>
 
-<!--<input class="codeInput" type="text" id="codeInputID" placeholder="https://d99-1.github.io/linktree" readonly/> -->
-<h1 class="codeInput" id="codeInputID"><pre id="fullLink"></pre></h1>
+<h1 class="codeInput" id="codeInputID"><pre id="fullLink"></pre> The short url should display here after form is submitted</h1>
 
     <!---
     <div class="thumbnail__links">
       <ul class="list-inline m-b-0 text-center">
-        <li><a href="http://alexdevero.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
-        <li><a href="https://www.behance.net/alexdevero" target="_blank"><fa class="fa fa-behance"></fa></a></li>
-        <li><a href="https://github.com/alexdevero" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a href="https://twitter.com/alexdevero" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        NOTE => This is for later
+        <li><a href="https://github.com/d99-1/linktree" target="_blank"><i class="fa fa-github"></i></a></li>
       </ul>
     </div>
 --->
@@ -50,59 +47,59 @@
         <label for="username">Username</label>
         <input class="form-control" type="text" name="username" id="username" placeholder="@Dhyan99" required />
       </div>
-            <div class="form-group">
+      <div class="form-group">
+        <label for="title">Number Of Links</label>
+        <select name="Number Of Links" id="numOfLinks" class="form-control" onchange="getnum()">
+          <option value="3">3</option>
+          <option value="4">4</option>
+          
+        </select>
+      </div>
+            <div class="form-group" id="link1titlediv" >
         <label for="title">Link 1 Title</label>
         <input class="form-control" type="text" name="link1title" id="link1title" placeholder="Youtube" required />
       </div>
-      <div class="form-group">
+      <div class="form-group" id="link1div">
         <label for="url">Link 1 URL</label>
         <input class="form-control" type="url" name="link1" id="link1" placeholder="https://youtube.com" required title="The URL must begin with https://"/>
       </div>
-      <div class="form-group">
+      <div class="form-group" id="link2titlediv">
         <label for="title">Link 2 Title</label>
         <input class="form-control" type="text" name="link2title" id="link2title" placeholder="Github" required />
       </div>
-      <div class="form-group">
+      <div class="form-group" id="link2div">
         <label for="url">Link 2 URL</label>
         <input class="form-control" type="url" name="link2" id="link2" placeholder="https://www.github.com" required title="The URL must begin with https://"/>
       </div>
-      <div class="form-group">
+      <div class="form-group" id="link3titlediv" >
         <label for="title">Link 3 Title</label>
         <input class="form-control" type="text" name="link3title" id="link3title" placeholder="Stack Overflow" required />
       </div>
-      <div class="form-group">
+      <div class="form-group" id="link3div" >
         <label for="url">Link 3 URL</label>
         <input class="form-control" type="url" name="link3" id="link3" placeholder="https://stackoverflow.com" required title="The URL must begin with https://"/>
       </div>
-      <div class="m-t-lg">
+      <div class="form-group" id="link4titlediv" hidden>
+        <label for="url">Link 4 Title</label>
+        <input class="form-control" type="text" name="link4title" id="link4title" placeholder="Twitter" />
+      </div>
+      <div class="form-group" id="link4div" hidden>
+        <label for="url">Link 4 URL</label>
+        <input class="form-control" type="url" name="link4" id="link4" placeholder="https://twitter.com"  title="The URL must begin with https://"/>
+      </div>
+      <div class="m-t-lg" id="submitdiv">
         <ul class="list-inline">
-          <div class="g-recaptcha form-field"><div style="width: 304px; height: 78px;">
-            <div>
-              <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Ld90xIiAAAAAJTxjtxH8UBM-GPY-oQK6OclXKej&amp;co=aHR0cHM6Ly9yZWNhcHRjaGEtZGVtby5hcHBzcG90LmNvbTo0NDM.&amp;hl=en&amp;v=zmiYzsHi8INTJBWt2QZC9aM5&amp;size=normal&amp;cb=hasvmjajry19" width="304" height="78" role="presentation" name="a-xlewcp5civ19" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox">
-              </iframe>
-            </div>
-            <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;">
-            </textarea>
-          </div>
-          <iframe style="display: none;">
-            </iframe>
-        </div>
+
+           <li> 
             <button class="btn btn--form" id="doneBTN" type="submit" >Create My Link</button>
           </li>
         </ul>
       </div>
     </form>  
-    <script type="text/javascript">
-      var onloadCallback = function() {
-          var captchaContainer = document.querySelector('.g-recaptcha');
-          grecaptcha.render(captchaContainer, {
-            'sitekey' : '6Ld90xIiAAAAAJTxjtxH8UBM-GPY-oQK6OclXKej'
-          });
-          document.querySelector('button[type="submit"]').disabled = false;
-      };
-      </script>
   </div>
+
 </div>
+
   </div>   
 <!-- partial -->
 <script>
@@ -129,13 +126,16 @@
   var link3title = GetURLParameter('link3title')
   var link3 = GetURLParameter('link3')
   
+  //this is how the linksite gets data to show
+  //would love a better solution if anyone has one
   var postReq = "https://d99-1.github.io/linktree/#/"+username+"#"+pfp+"#"+link1title+"#"+link1+"#"+link2title+"#"+link2+"#"+link3title+"#"+link3
   var full = null
 
   
     var xhr = new XMLHttpRequest();
   if(pfp != null){
-xhr.open("POST", "https://d99-url-shortener-api.herokuapp.com/api/url/shortOnly", true);
+//gets short url from api
+    xhr.open("POST", "https://d99-url-shortener-api.herokuapp.com/api/url/shortOnly", true);
 xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.send(JSON.stringify({
     "fullUrl": postReq
@@ -148,11 +148,38 @@ xhr.onload = function() {
       console.log("full:" + full)
 
 }}
+//trying to hide the area for the short url until form is actually submitted
     function myDisplayer(some) {
     console.log("displayer"+full)
   document.getElementById("fullLink").innerHTML = some;
 }
   getRes().then(myDisplayer(full))
+
+
+numOfLinks = document.getElementById("numOfLinks")
+console.log(numOfLinks.value)
+//to display and hide textinput felids based on user selection for number of links
+function getnum() {
+      numOfLinks = document.getElementById("numOfLinks").value
+      extras = ["link4titlediv","link4div","link4"]
+
+      if(numOfLinks == 3){
+      var title4 = document.getElementById(extras[0])
+      var link4 = document.getElementById(extras[1])
+      var link4set = document.getElementById(extras[2])
+
+      link4set.removeAttribute('required');
+      title4.setAttribute('hidden', '');
+      link4.setAttribute('hidden', '');
+      } else if(numOfLinks== 4){
+        var title4 = document.getElementById(extras[0])
+      var link4 = document.getElementById(extras[1])
+      var link4set = document.getElementById(extras[2])
+      link4set.setAttribute('required', '');
+      title4.removeAttribute('hidden');
+      link4.removeAttribute('hidden');
+      }
+    }
 </script>
 </body>
 </html>
