@@ -130,9 +130,10 @@
   //would love a better solution if anyone has one
   var postReq = "https://d99-1.github.io/linktree/#/"+username+"#"+pfp+"#"+link1title+"#"+link1+"#"+link2title+"#"+link2+"#"+link3title+"#"+link3
   var full = null
+  console.log(postReq)
 
   
-    var xhr = new XMLHttpRequest();
+/*    var xhr = new XMLHttpRequest();
   if(pfp != null){
 //gets short url from api
     xhr.open("POST", "https://d99-url-shortener-api.herokuapp.com/api/url/shortOnly", true);
@@ -147,7 +148,7 @@ xhr.onload = function() {
   full = "res.toString()"
       console.log("full:" + full)
 
-}}
+}}*/
 //trying to hide the area for the short url until form is actually submitted
     function myDisplayer(some) {
     console.log("displayer"+full)
